@@ -11,7 +11,9 @@ app.use("/api/pokemon", pokemonRouter)
 
 app.listen(
     PORT,
+    '0.0.0.0', // Aceita conexões de qualquer IP da rede
     () => {
         console.log(`API rodando em http://localhost:${PORT}`)
+        console.log(`Acessível na rede em http://192.168.0.4:${PORT}`)
     }
 )
