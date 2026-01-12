@@ -5,7 +5,6 @@ const pokemonRouter = require("./routers/PokemonRouter")
 
 const app = express()
 const PORT = 3000
-
 app.use(express.static(path.join(__dirname,"..","public")))
 app.use("/api/pokemon", pokemonRouter)
 

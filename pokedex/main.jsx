@@ -16,7 +16,6 @@ const PokedexMain = () => {
 
     async function carregarPokemons() {
         try{
-<<<<<<< HEAD
             console.log('Carregando pokémons da API...');
             setLoading(true);
             setError(null);
@@ -27,17 +26,6 @@ const PokedexMain = () => {
         }catch(error){
             console.error('Erro ao carregar:', error);
             setError('Erro ao carregar pokémons. Verifique sua conexão.');
-=======
-            console.log('Carregando pokémons do servidor...');
-            setLoading(true);
-            setError(null);
-            const dados = await fetchPokemons();
-            console.log('Pokémons carregados:', dados.length);
-            setPokemons(dados);
-        }catch(error){
-            console.error('Erro ao carregar:', error);
-            setError('Erro ao conectar ao servidor. Verifique se o servidor está rodando.');
->>>>>>> 1016952ab9916595ddbb3b48080bd605a9d40e24
         } finally {
             setLoading(false);
         }

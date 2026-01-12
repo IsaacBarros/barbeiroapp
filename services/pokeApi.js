@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-<<<<<<< HEAD
 // Configuração para usar servidor local
 const USE_LOCAL_SERVER = true;
 const LOCAL_SERVER_URL = 'http://192.168.0.4:3000';
@@ -41,30 +40,11 @@ export const fetchPokemons = async (limit = 20, offset = 0) => {
   } catch (error) {
     console.error('Erro ao buscar pokémons:', error);
     console.error('URL tentada:', USE_LOCAL_SERVER ? `${BASE_URL}/api/pokemon` : `${BASE_URL}/pokemon`);
-=======
-// Configuração do servidor local
-const SERVER_URL = 'http://192.168.0.4:3000';
-
-console.log('🔧 Servidor configurado:', SERVER_URL);
-
-/**
- * Busca todos os Pokémons do servidor local
- */
-export const fetchPokemons = async () => {
-  try {
-    console.log('Buscando pokémons do servidor:', `${SERVER_URL}/api/pokemon`);
-    const response = await axios.get(`${SERVER_URL}/api/pokemon`);
-    console.log('Pokémons carregados:', response.data.length);
-    return response.data;
-  } catch (error) {
-    console.error('Erro ao buscar pokémons:', error.message);
->>>>>>> 1016952ab9916595ddbb3b48080bd605a9d40e24
     throw error;
   }
 };
 
 /**
-<<<<<<< HEAD
  * Busca detalhes de um Pokémon específico
  * @param {string} urlOrId - URL ou ID do pokémon
  * @returns {Promise} Detalhes do pokémon
@@ -126,16 +106,4 @@ export const searchPokemonByName = async (name) => {
     return null;
   }
 };
-=======
- * Busca um Pokémon por ID do servidor local
- */
-export const fetchPokemonById = async (id) => {
-  try {
-    const response = await axios.get(`${SERVER_URL}/api/pokemon/${id}`);
-    return response.data;
-  } catch (error) {
-    console.error(`Erro ao buscar pokémon ${id}:`, error.message);
-    throw error;
-  }
-};
->>>>>>> 1016952ab9916595ddbb3b48080bd605a9d40e24
+
